@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  db:
+    build: mariadb:latest
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./DB/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    networks:
+      - db-network
+  backend:
+    build: ./backend
+    restart: always
+    ports:
+      "8080:8080"
+    depends-on:
+      - db
+    networks:
+      - db-network
+      - api
+  frontend:
+    build: ./frontend
+    restart: always
+    ports:
+      "3000:3000"
+    depends-on:
+      - db
+      - backend
+    networks:
+      - api
+
+networks:
+  db-network:
+  api:

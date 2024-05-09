@@ -1,0 +1,9 @@
+CREATE DABATASE IF NOT EXISTS spotiflyx;
+USE spotiflyx;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR NOT NULL,
+    password VARCHAR NOT NULL,
+    name VARCHAR NOT NULL
+);
