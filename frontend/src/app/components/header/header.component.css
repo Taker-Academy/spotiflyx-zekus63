@@ -6,12 +6,16 @@ nav {
     margin: 15px;
 }
 
-img {
+nav a {
+    display: flex;
+}
+
+nav a img {
     height: auto;
     width: 50px;
 }
 
-h1 {
+nav h1 {
     font-family: Poetsen One, Arial;
     font-weight: 400;
     margin-left: 15px;

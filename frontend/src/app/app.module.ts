@@ -1,11 +1,15 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { LoginComponent } from './components/login/login.component';
-import { HeaderComponent } from './components/header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
+
+// Main components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+// Import login components
+import { SigninComponent } from './components/login/signin.component';
+import { SignupComponent } from './components/login/signup.component';
 
 const routes: Routes = [
   {
@@ -13,8 +17,12 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'login',
-    component: LoginComponent
+    path: 'signup',
+    component: SignupComponent,
+  },
+  {
+    path: 'signin',
+    component: SigninComponent,
   },
 ];
 
@@ -25,7 +33,8 @@ const routes: Routes = [
     HomeComponent,
     HeaderComponent,
     // Login
-    LoginComponent
+    SigninComponent,
+    SignupComponent
   ],
   imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],
