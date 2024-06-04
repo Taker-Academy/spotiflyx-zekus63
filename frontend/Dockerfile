@@ -3,7 +3,8 @@ FROM node:latest
 WORKDIR /app
 
 RUN npm install -g @angular/cli
-RUN ng new spotifly --directory . --minimal
+RUN ng new spotiflyx --directory . --minimal
+RUN rm -rf src/
 COPY . .
 
 EXPOSE 3000

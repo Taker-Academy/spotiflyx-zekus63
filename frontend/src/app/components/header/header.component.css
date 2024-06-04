@@ -8,7 +8,7 @@ nav {
 
 img {
     height: auto;
-    width: 2vw;
+    width: 50px;
 }
 
 h1 {
@@ -16,4 +16,19 @@ h1 {
     font-weight: 400;
     margin-left: 15px;
     color: white;
+}
+
+/* Navbar */
+nav .navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+    margin-left: auto;
+}
+
+nav .navbar .linknavbar {
+    font-family: Poetsen One, Arial;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
 }
