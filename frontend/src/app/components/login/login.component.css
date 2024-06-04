@@ -136,6 +136,20 @@
 }
 
 .arrow .fa-solid.fa-arrow-left {
-    font-size: 1.5em;
+    font-size: 1.6em;
     color: #00dfc4;
+}
+
+/* Responsive */
+@media screen and (max-width: 750px) {
+    .container {
+        border: none;
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container .form .inputBox {
+        width: 80vw;
+    }
 }
