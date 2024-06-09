@@ -55,7 +55,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/scripts/main.js"
+              "src/scripts/searchBar.js"
             ]
           },
           "configurations": {
