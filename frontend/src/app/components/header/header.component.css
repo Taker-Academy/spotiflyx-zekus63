@@ -115,6 +115,12 @@ nav .navbar .linknavbar {
 
 /* Responsive */
 @media screen and (max-width: 700px) {
+    nav {
+        margin-bottom: 90px;
+    }
+    nav .navbar {
+        width: 160px;
+    }
     .search {
         position: absolute;
         width: 80vw;
@@ -125,9 +131,6 @@ nav .navbar .linknavbar {
     }
     .search .input {
         width: 75vw;
-    }
-    nav .navbar {
-        width: 160px;
     }
 }
 

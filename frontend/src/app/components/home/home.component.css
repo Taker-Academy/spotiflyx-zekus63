@@ -1,6 +1,62 @@
-/* .horizontal.line {
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 1px;
-    background-color: #00dfc4;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 91.2vh;
+    width: auto;
+    margin: 15px;
+}
+
+.content h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: rgba(255,255,255, 0.5);
+}
+
+.media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.1);
+}
+
+/* Video */
+.media .video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.media .video h3 {
+    margin: 15px 0 15px 0;
+}
+
+/* Separator */
+.media .separator {
+    height: 80vh;
+    width: 2px;
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Music */
+.media .music {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.media .music h3 {
+    margin: 15px 0 15px 0;
+}
