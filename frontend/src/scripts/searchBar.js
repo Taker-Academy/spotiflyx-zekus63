@@ -11,11 +11,11 @@ function initSearchBar() {
     const search = document.querySelector('.search');
     const navbar = document.querySelector('.navbar');
 
-    if (icon && search) {
+    if (icon && search && window.innerWidth > 700) {
         icon.onclick = function() {
             search.classList.toggle('active');
             navbar.classList.toggle('active');
             deleteContent();
-        }  
+        }
     }
 }

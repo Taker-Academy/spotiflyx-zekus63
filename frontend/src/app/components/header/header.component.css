@@ -112,3 +112,27 @@ nav .navbar .linknavbar {
     background-color: #fff;
     font-size: 15px;
 }
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+    .search {
+        position: absolute;
+        width: 80vw;
+        transform: translateX(-50%);
+        top: 100px;
+        left: 50%;
+        transition: 0s;
+    }
+    .search .input {
+        width: 75vw;
+    }
+    nav .navbar {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav h1 {
+        display: none;
+    }
+}
