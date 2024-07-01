@@ -1,4 +1,4 @@
-version: '3'
+version: "3.8"
 
 services:
   db:
@@ -9,28 +9,43 @@ services:
     volumes:
       - ./DB/schema.sql:/docker-entrypoint-initdb.d/schema.sql
     networks:
-      - db-network
+      - network_spotiflyx
+
   backend:
     build: ./backend
     restart: always
+    env_file:
+      - path: ./backend/.env
+        required: true
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_HOST: ${MYSQL_HOST}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_USER_PASSWORD: ${MYSQL_USER_PASSWORD}
+      PORT: ${PORT}
+      SECRET: ${SECRET}
+
     ports:
       "8080:8080"
+    command: npm start
     depends-on:
       - db
     networks:
-      - db-network
-      - api
+      - network_spotiflyx
+
+
   frontend:
     build: ./frontend
+    container_name: angular-frontend
     restart: always
     ports:
       "3000:3000"
     depends-on:
-      - db
       - backend
     networks:
-      - api
+      - network_spotiflyx
 
 networks:
-  db-network:
-  api:
+  network_spotiflyx:
+    driver: bridge
+    attachable: true
